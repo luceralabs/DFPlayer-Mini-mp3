@@ -1,3 +1,6 @@
+#ifndef DFPLAYER_MINI_MP3_H_
+#define DFPLAYER_MINI_MP3_H_
+
 /*******************************************************************************
  * Copyright (C) 2014 DFRobot                                                  *
  *                                                                             *
@@ -39,12 +42,9 @@
  *	Description:			mp3 library for DFPlayer mini board
  *					note: mp3 file must put into mp3 folder in your tf card
  */
+
 #include "Arduino.h"
 #include "SoftwareSerial.h"
-
-uint8_t send_buf[10] = {
-	0x7E, 0xFF, 06, 00, 00, 00, 00, 00, 00, 0xEF};
-uint8_t recv_buf[10];
 
 //* void(*send_func)() = NULL;
 //* HardwareSerial *hserial = NULL;
@@ -167,3 +167,4 @@ void mp3_DAC (boolean state);
 //
 void mp3_random_play (); 
 
+#endif

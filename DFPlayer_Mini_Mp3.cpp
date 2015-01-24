@@ -42,8 +42,9 @@
 #include <SoftwareSerial.h>
 //#include  "DFPlayer_Mini_Mp3.h"
 
-extern uint8_t send_buf[10];
-extern uint8_t recv_buf[10];
+uint8_t send_buf[10] = {
+	0x7E, 0xFF, 06, 00, 00, 00, 00, 00, 00, 0xEF};
+uint8_t recv_buf[10];
 
 static void(*send_func)() = NULL;
 static HardwareSerial * _hardware_serial = NULL;
